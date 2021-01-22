@@ -1,4 +1,4 @@
-
+#!/usr/bin/env bash
 git add .
 git commit -m "TESTING" 
 git push  https://siewdass:fbafryb00@github.com/siewdass/siewdass.github.io
