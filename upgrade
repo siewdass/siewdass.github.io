@@ -1,4 +1,4 @@
 
 git add .
 git commit -m "TESTING" 
-git push -u origin master https://siewdass:fbafryb00@github.com/siewdass/siewdass.github.io
+git push  https://siewdass:fbafryb00@github.com/siewdass/siewdass.github.io
