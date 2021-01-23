@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
-<h1 id="date"></h1>
-<script>
-	var dateObj = new Date();
-	var month = ('0' + (dateObj.getMonth() + 1)).slice(-2);
-	var date = ('0' + dateObj.getDate()).slice(-2);
-	var year = dateObj.getFullYear();
-	var format = year + '-' + month + '-' + date;
+	<body>
+		<h1 id="date"></h1>
 
-	document.getElementById('date').innerHTML = format
-</script>
+		<script>
+			var dateObj = new Date();
+			var month = ('0' + (dateObj.getMonth() + 1)).slice(-2);
+			var date = ('0' + dateObj.getDate()).slice(-2);
+			var year = dateObj.getFullYear();
+			var format = year + '-' + month + '-' + date;
+		
+			document.getElementById('date').innerHTML = format
+		</script>
+	</body>
 </html>
