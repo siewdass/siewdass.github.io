@@ -18,6 +18,11 @@
 	from lib import component
 	import 'file.extension'
 
+	# comment line
+	##
+	comment multiple lines
+	##
+
 	application {
 		id = NULL
 		title = ''
@@ -34,10 +39,9 @@
 	}
 
 	myClass {	# class
-	}
-
-	myFunction ( arg ) {	# function
-		debug ( arg )
+		myFunction ( arg ) {	# function
+			Debug ( arg )
+		}
 	}
 
 	Application {	
@@ -48,13 +52,13 @@
 		test = 'TEST' # new variable
 
 		MyClass = {			# new instance
-			Id: myclass		# component data
+			Id: something	# class property
 		}
 
 		Button {
 			Id: button1
 			Click: {
-				MyFunction ( 'exiting' )
+				something.MyFunction ( 'exiting' )
 				window.exit ( )
 			}
 		}
