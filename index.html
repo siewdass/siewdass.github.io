@@ -12,7 +12,55 @@
 	
 	<h1 id="date"></h1>
 	<!--h1>Hola</h1-->
-	<!--plain>adios</plain-->
+	<!--plain>
+	
+	import debug
+	from lib import component
+	import 'file.extension'
+
+	application {
+		id = NULL
+		title = ''
+		width = 10            
+		height = 10
+
+		exit ( ) {
+		}
+	}
+
+	button {
+		id = NULL
+		click = NULL
+	}
+
+	myClass {
+	}
+
+	myfunction ( arg ) {
+		debug ( arg )
+	}
+
+	Application {	
+		Id: window	
+		Title: 'Hello World'	
+		Width: 100            
+		Height: 100
+		test = 'TEST' # new variable
+
+		MyClass = {			# new instance
+			id: myclass		# component data
+		}
+
+		Button {
+			Id: button1
+			click: {
+				MyFunction ( 'exiting' )
+				window.exit ( )
+			}
+		}
+	}
+	
+	</plain-->
 
 	<script>
 		var testing = 'Prostituta'
@@ -22,3 +70,4 @@
 	<script src="script.js"></script>
 </body>
 </html>
+
