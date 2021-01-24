@@ -1,2 +1,24 @@
-alert('puta')
-document.write('chorizo portuano')
+class web {
+    
+}
+
+class button {
+    text = ''
+    width = 20
+    height = 20
+    constructor( ) {
+
+    }
+
+    draw( ) { 
+        var element = document.createElement( 'button' )
+        element.innerHTML = this.text
+        element.style.color = 'green';
+        element.style.backgroundColor = 'blue'
+        document.body.appendChild( element )
+    }
+}
+
+Button = new button( )
+Button.text = 'Click'
+Button.draw( )
