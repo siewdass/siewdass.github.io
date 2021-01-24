@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 git add . >> /dev/null 2>&1
 git commit -m "TESTING" >> /dev/null 2>&1
-git push https://siewdass:fbafryb00@github.com/siewdass/siewdass.github.io
+git push https://siewdass:fbafryb00@github.com/siewdass/siewdass.github.io | tee build/build.log
