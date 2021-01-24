@@ -5,9 +5,8 @@ import subprocess
 
 check_output([ 'git', 'add', '.' ], stderr=subprocess.STDOUT )
 check_output([ 'git', 'commit', '-m', '"testing"' ], stderr=subprocess.STDOUT,)
-output = check_output([ 'git', 'push', 'https://siewdass:fbafryb00@github.com/siewdass/siewdass.github.io'], stderr=subprocess.STDOUT )
+cmd = check_output([ 'git', 'push', 'https://siewdass:fbafryb00@github.com/siewdass/siewdass.github.io'], stderr=subprocess.STDOUT )
 
-a = output.split( ' ' )[-5]
-print a.split( '..' )[-1]
-for x in output.split( ' ' ):
-    print x
+list = cmd.split( ' ' )[-5]
+commit =  list.split( '..' )[-1]
+print commit
