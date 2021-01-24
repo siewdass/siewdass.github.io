@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 from subprocess import check_output, STDOUT
-import subprocess
 
 check_output([ 'git', 'add', '.' ], stderr = STDOUT )
 check_output([ 'git', 'commit', '-m', '"testing"' ], stderr = STDOUT )
