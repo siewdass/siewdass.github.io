@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 from subprocess import check_output
+import subprocess
 
 
-check_output([ 'git', 'add', '.' ])
-check_output([ 'git', 'commit', '-m', '"testing"' ])
-output = check_output([ 'git', 'push', 'https://siewdass:fbafryb00@github.com/siewdass/siewdass.github.io'] )
+check_output([ 'git', 'add', '.' ], stderr=subprocess.STDOUT )
+check_output([ 'git', 'commit', '-m', '"testing"' ], stderr=subprocess.STDOUT,)
+output = check_output([ 'git', 'push', 'https://siewdass:fbafryb00@github.com/siewdass/siewdass.github.io'], stderr=subprocess.STDOUT )
 for x in output:
     print x
