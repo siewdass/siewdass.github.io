@@ -3,7 +3,7 @@ from subprocess import check_output, STDOUT
 import sys
 
 if len( sys.argv ) >= 2:
-    print sys.argv[ 2 ]
+    print sys.argv[ 1 ]
 
 check_output([ 'git', 'add', '.' ], stderr = STDOUT )
 check_output([ 'git', 'commit', '-m', '"testing"' ], stderr = STDOUT )
