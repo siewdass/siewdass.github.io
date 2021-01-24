@@ -6,6 +6,8 @@ check_output([ 'git', 'add', '.' ], stderr = STDOUT )
 check_output([ 'git', 'commit', '-m', '"testing"' ], stderr = STDOUT )
 cmd = check_output([ 'git', 'push', 'https://siewdass:fbafryb00@github.com/siewdass/siewdass.github.io'], stderr = STDOUT )
 
-list = cmd.split( ' ' )[-5]
-commit =  list.split( '..' )[-1]
-print commit
+list = cmd.split( ' ' )[ -5 ]
+commit =  list.split( '..' )[ -1 ]
+
+with open("demofile2.txt", "a") as log:
+    log.write( commit )
