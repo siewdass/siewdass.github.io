@@ -9,5 +9,5 @@ cmd = check_output([ 'git', 'push', 'https://siewdass:fbafryb00@github.com/siewd
 list = cmd.split( ' ' )[ -5 ]
 commit =  list.split( '..' )[ -1 ]
 
-with open("demofile2.txt", "a") as log:
+with open( 'build/build.log', 'w' ) as log:
     log.write( commit )
