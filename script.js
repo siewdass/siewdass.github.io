@@ -1,59 +1,47 @@
 class button {
-    text = null
+    text = 'Button'
     width = null
     height = null
     color = null
     backgroundColor = null
-    element = document.createElement( 'button' )
-    constructor( ) {
+    icon = null
 
-    }
+    _a = document.createElement( 'a' )
+    _i = document.createElement( 'i' )
 
-    draw( ) { 
+    draw( ) {
+
+        if ( this.icon !== null ) {
+            this._i.className = 'material-icons left'
+            this._i.innerHTML = this.icon
+        }
+
         if ( this.color !== null ) {
-            this.element.style.color = this.color;
+            this._a.style.color = this.color;
         }
         
         if ( this.backgroundColor !== null ) {
-            this.element.style.backgroundColor = this.backgroundColor
+            this._a.style.backgroundColor = this.backgroundColor
         }
 
         if ( this.text !== null ) {
-            this.element.innerHTML = this.text 
+            this._a.innerHTML = this.text 
         }
+        
+        this._a.className = 'waves-effect waves-light btn'
+
+        if ( this.icon !== null ) {
+            this._a.appendChild( this._i )
+        }
+       
+        document.body.appendChild( this._a )
     }
 }
 
-class container {
-    toDraw = [ ]
-    element = document.createElement( 'div' )
-
-    append( component ) {
-        this.toDraw.push( component )
-    }
-
-    draw( ) {
-        for ( let i = 0; i < this.toDraw.length; i++ ) {
-            this.element.appendChild( this.toDraw[ i ] )
-        }
-        document.body.appendChild( this.element )
-    }
-}
-
-Container = new container( )
 
 Button = new button( )
 Button.text = 'Click'
-Button.color = 'purple'
-Button.backgroundColor = 'red'
+//Button.color = 'purple'
+Button.icon = 'cloud'
+//Button.backgroundColor = 'red'
 Button.draw( )
-
-Button1 = new button( )
-Button1.text = 'Click'
-Button1.color = 'purple'
-Button1.backgroundColor = 'red'
-Button1.draw( )
-
-Container.append( Button.element )
-Container.append( Button1.element )
-Container.draw( )
