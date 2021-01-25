@@ -1,13 +1,8 @@
-class web {
-    
-}
-
 class button {
     text = ''
     width = 20
     height = 20
     constructor( ) {
-
     }
 
     draw( ) { 
@@ -21,4 +16,4 @@ class button {
 
 Button = new button( )
 Button.text = 'Click'
-Button.draw( )
+//Button.draw( )
