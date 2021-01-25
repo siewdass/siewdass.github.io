@@ -14,6 +14,7 @@ class button {
     }
 }
 
+var x = ''
 Button = new button( )
 Button.text = 'Click'
 //Button.draw( )
