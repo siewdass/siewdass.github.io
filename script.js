@@ -149,7 +149,7 @@ Settings.draw ( )
 Refresh = new actionButton ( )
 Refresh.icon = 'refresh'
 Refresh.right = true
-ActionButton2.draw ( )
+Refresh.draw ( )
 
 Search = new actionButton ( )
 Search.icon = 'search'
