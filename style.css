@@ -1,6 +1,9 @@
 nav .brand-logo {
     left: 0%;
-    margin-left: 130px;
+    font-size: 1.5rem;
+    margin-left: 110px;
+    line-height: 54px;
+
 } 
 
 nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
