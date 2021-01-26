@@ -46,10 +46,16 @@ class actionBar {
 
     draw ( ) {
 
+        this.div.className = 'nav-wrapper'
+        this.nav.appendChild( this.div )
+        document.body.appendChild( this.nav )
     }
 }
 
-Button = new button( )
+/*Button = new button( )
 Button.text = 'Click'
 Button.icon = 'cloud'
-Button.draw( )
+Button.draw( )*/
+
+ActionBar = new actionBar ( )
+ActionBar.draw ( )
