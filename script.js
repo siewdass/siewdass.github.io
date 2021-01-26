@@ -38,21 +38,18 @@ class button {
     }
 }
 
-
 class actionBar {
     color = null
 
-    nav = document.createElement(  'nav'  )
+    nav = document.createElement( 'nav' )
+    div = document.createElement( 'div' )
 
-    draw () {
+    draw ( ) {
 
     }
 }
 
-
 Button = new button( )
 Button.text = 'Click'
-//Button.color = 'purple'
 Button.icon = 'cloud'
-//Button.backgroundColor = 'red'
 Button.draw( )
