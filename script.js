@@ -66,6 +66,16 @@ class actionBar {
             this.div.appendChild( this.ulLeft )
         }
 
+        for ( var i = 0; i < this.objects.length; i++ ) {
+            if ( this.objects[ i ].brand ) {
+                this.div.appendChild(  this.objects[ i ].component )
+            }
+        }
+
+        if ( this.objects[ 0 ].left ) {
+            this.ulLeft.appendChild( this.objects[ 0 ].li )
+        }
+
         if ( this.right ) {
 
             if ( this.objects[ 0 ].right ) {
@@ -84,7 +94,7 @@ class actionBar {
 
 class actionButton {
     right = false
-    left = true
+    left = false
     li = document.createElement( 'li' )
     a = document.createElement( 'a' )
     i = document.createElement( 'i' )
@@ -98,15 +108,34 @@ class actionButton {
     }
 }
 
+//<a href="#" class="brand-logo">Telegram</a>
+class actionBrand {
+    brand = true
+    text = 'Brand'
+    component = document.createElement( 'a' )
+
+    draw( ) {
+        this.component.className = 'brand-logo'
+        this.component.innerHTML = this.text
+    }
+}
+
 /*Button = new button( )
 Button.text = 'Click'
 Button.icon = 'cloud'
 Button.draw( )*/
 
+
 ActionBar = new actionBar ( )
 
 ActionButton = new actionButton ( )
+ActionButton.left = true
 ActionButton.draw ( )
 
+ActionBrand = new actionBrand ( )
+ActionBrand.text = 'Telegram'
+ActionBrand.draw( )
+
 ActionBar.append( ActionButton )
+ActionBar.append( ActionBrand )
 ActionBar.draw ( )
