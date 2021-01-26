@@ -57,6 +57,11 @@ class actionBar {
     draw ( ) {
 
         if ( this.left ) {
+
+            if ( this.objects[ 0 ].left ) {
+                this.ulLeft.appendChild( this.objects[ 0 ].li )
+            }
+
             this.ulLeft.className = 'left'
             this.div.appendChild( this.ulLeft )
         }
@@ -78,8 +83,8 @@ class actionBar {
 }
 
 class actionButton {
-    right = true
-    left = false
+    right = false
+    left = true
     li = document.createElement( 'li' )
     a = document.createElement( 'a' )
     i = document.createElement( 'i' )
