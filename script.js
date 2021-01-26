@@ -58,8 +58,10 @@ class actionBar {
 
         if ( this.left ) {
 
-            if ( this.objects[ 0 ].left ) {
-                this.ulLeft.appendChild( this.objects[ 0 ].li )
+            for ( var i = 0; i < this.objects.length; i++ ) {
+                if ( this.objects[ i ].left ) {
+                    this.ulLeft.appendChild( this.objects[ 0 ].li )
+                }
             }
 
             this.ulLeft.className = 'left'
@@ -72,14 +74,13 @@ class actionBar {
             }
         }
 
-        if ( this.objects[ 0 ].left ) {
-            this.ulLeft.appendChild( this.objects[ 0 ].li )
-        }
 
         if ( this.right ) {
-
-            if ( this.objects[ 0 ].right ) {
-                this.ulRight.appendChild( this.objects[ 0 ].li )
+            
+            for ( var i = 0; i < this.objects.length; i++ ) {
+                if ( this.objects[ i ].right ) {
+                    this.ulRight.appendChild( this.objects[ i ].li )
+                }
             }
 
             this.ulRight.className = 'right'
@@ -95,20 +96,23 @@ class actionBar {
 class actionButton {
     right = false
     left = false
+    icon = null
     li = document.createElement( 'li' )
     a = document.createElement( 'a' )
     i = document.createElement( 'i' )
     
     draw( ) {
-        this.i.className = 'material-icons'
-        this.i.innerHTML = 'menu'
+
+        if ( this.icon !== null ) {
+            this.i.className = 'material-icons'
+            this.i.innerHTML = this.icon
+        }
 
         this.a.appendChild( this.i )
         this.li.appendChild( this.a )
     }
 }
 
-//<a href="#" class="brand-logo">Telegram</a>
 class actionBrand {
     brand = true
     text = 'Brand'
@@ -129,6 +133,7 @@ Button.draw( )*/
 ActionBar = new actionBar ( )
 
 ActionButton = new actionButton ( )
+ActionButton.icon = 'menu'
 ActionButton.left = true
 ActionButton.draw ( )
 
@@ -136,6 +141,25 @@ ActionBrand = new actionBrand ( )
 ActionBrand.text = 'Telegram'
 ActionBrand.draw( )
 
+ActionButton1 = new actionButton ( )
+ActionButton1.icon = 'more_vert'
+ActionButton1.right = true
+ActionButton1.draw ( )
+
+ActionButton2 = new actionButton ( )
+ActionButton2.icon = 'refresh'
+ActionButton2.right = true
+ActionButton2.draw ( )
+
+ActionButton3 = new actionButton ( )
+ActionButton3.icon = 'search'
+ActionButton3.right = true
+ActionButton3.draw ( )
+
 ActionBar.append( ActionButton )
 ActionBar.append( ActionBrand )
+
+ActionBar.append( ActionButton3 )
+ActionBar.append( ActionButton2 )
+ActionBar.append( ActionButton1 )
 ActionBar.draw ( )
