@@ -38,8 +38,8 @@ class button {
     }
 }
 
-/* a */
 class actionBar {
+    objects = []
     color = null
     left = true
     right = true
@@ -50,6 +50,10 @@ class actionBar {
     ulLeft = document.createElement( 'ul' )
     ulRight = document.createElement( 'ul' )
 
+    append ( element ) {
+        this.objects.push( element )
+    }
+
     draw ( ) {
 
         if ( this.left ) {
@@ -58,6 +62,11 @@ class actionBar {
         }
 
         if ( this.right ) {
+
+            if ( this.objects[ 0 ].right ) {
+                this.ulRight.appendChild( this.objects[ 0 ].li )
+            }
+
             this.ulRight.className = 'right'
             this.div.appendChild( this.ulRight )
         }
@@ -68,6 +77,21 @@ class actionBar {
     }
 }
 
+class actionButton {
+    right = true
+    left = false
+    li = document.createElement( 'li' )
+    a = document.createElement( 'a' )
+    i = document.createElement( 'i' )
+    
+    draw( ) {
+        this.i.className = 'material-icons'
+        this.i.innerHTML = 'menu'
+
+        this.a.appendChild( this.i )
+        this.li.appendChild( this.a )
+    }
+}
 
 /*Button = new button( )
 Button.text = 'Click'
@@ -75,4 +99,9 @@ Button.icon = 'cloud'
 Button.draw( )*/
 
 ActionBar = new actionBar ( )
+
+ActionButton = new actionButton ( )
+ActionButton.draw ( )
+
+ActionBar.append( ActionButton )
 ActionBar.draw ( )
