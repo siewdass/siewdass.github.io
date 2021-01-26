@@ -40,11 +40,26 @@ class button {
 
 class actionBar {
     color = null
-
+    left = true
+    right = true
+    
     nav = document.createElement( 'nav' )
     div = document.createElement( 'div' )
 
+    ulLeft = document.createElement( 'ul' )
+    ulRight = document.createElement( 'ul' )
+
     draw ( ) {
+
+        if ( this.left ) {
+            this.ulLeft.className = 'left'
+            this.div.appendChild( this.ulLeft )
+        }
+
+        if ( this.right ) {
+            this.ulRight.className = 'right'
+            this.div.appendChild( this.ulRight )
+        }
 
         this.div.className = 'nav-wrapper'
         this.nav.appendChild( this.div )
