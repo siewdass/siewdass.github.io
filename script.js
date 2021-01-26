@@ -132,34 +132,34 @@ Button.draw( )*/
 
 ActionBar = new actionBar ( )
 
-ActionButton = new actionButton ( )
-ActionButton.icon = 'menu'
-ActionButton.left = true
-ActionButton.draw ( )
+Menu = new actionButton ( )
+Menu.icon = 'menu'
+Menu.left = true
+Menu.draw ( )
 
-ActionBrand = new actionBrand ( )
-ActionBrand.text = 'Telegram'
-ActionBrand.draw( )
+Telegram = new actionBrand ( )
+Telegram.text = 'Telegram'
+Telegram.draw( )
 
-ActionButton1 = new actionButton ( )
-ActionButton1.icon = 'more_vert'
-ActionButton1.right = true
-ActionButton1.draw ( )
+Settings = new actionButton ( )
+Settings.icon = 'more_vert'
+Settings.right = true
+Settings.draw ( )
 
-ActionButton2 = new actionButton ( )
-ActionButton2.icon = 'refresh'
-ActionButton2.right = true
-ActionButton2.draw ( )
+Refresh = new actionButton ( )
+Refresh.icon = 'refresh'
+Refresh.right = true
+Refresh.draw ( )
 
-ActionButton3 = new actionButton ( )
-ActionButton3.icon = 'search'
-ActionButton3.right = true
-ActionButton3.draw ( )
+Search = new actionButton ( )
+Search.icon = 'search'
+Search.right = true
+Search.draw ( )
 
-ActionBar.append( ActionButton )
-ActionBar.append( ActionBrand )
+ActionBar.append( Menu )
+ActionBar.append( Telegram )
 
-ActionBar.append( ActionButton3 )
-ActionBar.append( ActionButton2 )
-ActionBar.append( ActionButton1 )
+ActionBar.append( Search )
+ActionBar.append( Refresh )
+ActionBar.append( Settings )
 ActionBar.draw ( )
