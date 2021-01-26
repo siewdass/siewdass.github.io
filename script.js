@@ -39,6 +39,17 @@ class button {
 }
 
 
+class actionBar {
+    color = null
+
+    nav = document.createElement(  'nav'  )
+
+    draw () {
+
+    }
+}
+
+
 Button = new button( )
 Button.text = 'Click'
 //Button.color = 'purple'
