@@ -9,9 +9,9 @@
     { "name": "dancpu", "id": "MJ85N557811205B1T" },
     { "name": "johanny", "id": "18101B9110AC" },
     { "name": "harold", "id": "CN378TC2102605" },
-    { "name": "Melvin", "id": "171688428303" }
+    { "name": "Melvin", "id": "171688428303" },
+    { "name": "melvin-old", "id": "S100230300863" }
   ],
   "denied": [
-    { "name": "melvin-old", "id": "S100230300863" }
   ]
 }
